@@ -5,11 +5,11 @@ import {
   HOURS_NUMBER,
   SQUARE_COLORS,
   SQUARE_SIZE,
-} from "../consts/consts";
-import { SquareColor } from "../consts/types";
+} from "../../consts/consts";
+import { SquareColor } from "../../consts/types";
 import { ISquareCoords } from "../../interfaces/square-coords";
-import { getSquareCoords } from "../utils/get-square-coords";
-import { getUpdatedColorsMap } from "../utils/get-updated-colors-map";
+import { getSquareCoords } from "../../utils/get-square-coords";
+import { getUpdatedColorsMap } from "../../utils/get-updated-colors-map";
 
 export const CalendarGrid: FC = memo(() => {
   const daysArray = useMemo(() => [...Array(DAYS_NUMBER)], []);
@@ -58,7 +58,6 @@ export const CalendarGrid: FC = memo(() => {
         width: `${SQUARE_SIZE * 24}px`,
         display: "grid",
         gridTemplateRows: `repeat(${DAYS_NUMBER}, ${SQUARE_SIZE}px)`,
-
         gridTemplateColumns: `repeat(${HOURS_NUMBER}, ${SQUARE_SIZE}px)`,
       }}
       onMouseOver={ouMouseOver}

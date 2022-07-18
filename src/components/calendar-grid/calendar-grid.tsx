@@ -53,7 +53,7 @@ export const CalendarGrid: FC = memo(() => {
   return (
     <div
       style={{
-        width: `${SQUARE_SIZE * 24}px`,
+        width: `${SQUARE_SIZE * HOURS_NUMBER}px`,
         display: "grid",
         gridTemplateRows: `repeat(${DAYS_NUMBER}, ${SQUARE_SIZE}px)`,
         gridTemplateColumns: `repeat(${HOURS_NUMBER}, ${SQUARE_SIZE}px)`,
@@ -61,13 +61,13 @@ export const CalendarGrid: FC = memo(() => {
       onMouseOver={ouMouseOver}
       onMouseDown={onMousseDown}
     >
-      {daysArray.map((day, dayIndex) =>
-        hoursArray.map((hour, hourIndex) => {
+      {colorsMap.map((days, dayIndex) =>
+        days.map((color, hourIndex) => {
           return (
             <Square
               coords={{ dayIndex, hourIndex }}
               key={`${dayIndex}${hourIndex}`}
-              color={colorsMap[dayIndex][hourIndex]}
+              color={color}
             />
           );
         })

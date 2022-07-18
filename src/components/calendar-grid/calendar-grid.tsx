@@ -12,14 +12,12 @@ import { getSquareCoords } from "../../utils/get-square-coords";
 import { getUpdatedColorsMap } from "../../utils/get-updated-colors-map";
 
 export const CalendarGrid: FC = memo(() => {
-  const daysArray = useMemo(() => [...Array(DAYS_NUMBER)], []);
-  const hoursArray = useMemo(() => [...Array(HOURS_NUMBER)], []);
-  const colorsMapInit: SquareColor[][] = useMemo(
-    () => daysArray.map(() => hoursArray.map(() => "red")),
-    []
-  );
+  const daysArray = [...Array(DAYS_NUMBER)];
+  const hoursArray = [...Array(HOURS_NUMBER)];
 
-  const [colorsMap, setColorsMap] = useState(colorsMapInit);
+  const [colorsMap, setColorsMap] = useState<SquareColor[][]>(
+    daysArray.map(() => hoursArray.map(() => "red"))
+  );
   const [fillColor, setFillColor] = useState<SquareColor>("white");
   const [selectStartCoords, setSelectStartCoords] = useState<ISquareCoords>({
     hourIndex: 0,

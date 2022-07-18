@@ -1,5 +1,5 @@
-import { SquareColor } from "../consts/types";
-import { ISquareCoords } from "../interfaces/square-coords";
+import { SquareColor } from "../types/types";
+import { ISquareCoords } from "../types/square-coords";
 import React from "react";
 import { getSquareCoords } from "./get-square-coords";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { ISquareCoords } from "../interfaces/square-coords";
+import { ISquareCoords } from "../types/square-coords";
 
 export function getSquareCoords(event: React.MouseEvent): ISquareCoords {
   const dayIndex = Number(

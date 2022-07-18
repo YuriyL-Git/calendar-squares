@@ -1,7 +1,7 @@
 import React, { FC, memo } from "react";
-import { ISquareCoords } from "../../interfaces/square-coords";
+import { ISquareCoords } from "../../types/square-coords";
 import { SQUARE_SIZE } from "../../consts/consts";
-import { SquareColor } from "../../consts/types";
+import { SquareColor } from "../../types/types";
 
 interface IProps {
   color: SquareColor;

@@ -6,8 +6,8 @@ import {
   SQUARE_COLORS,
   SQUARE_SIZE,
 } from "../../consts/consts";
-import { SquareColor } from "../../consts/types";
-import { ISquareCoords } from "../../interfaces/square-coords";
+import { SquareColor } from "../../types/types";
+import { ISquareCoords } from "../../types/square-coords";
 import { getSquareCoords } from "../../utils/get-square-coords";
 import { getUpdatedColorsMap } from "../../utils/get-updated-colors-map";
 
